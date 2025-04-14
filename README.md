@@ -34,3 +34,36 @@ Run tests using:
 cd receiver-service && npm test
 cd ../listener-service && npm test
 ```
+
+## API Documentation
+
+### POST /api/receiver
+
+Endpoint to receive user data.
+
+**Request Body:**
+
+```json
+{
+  "user": "Harry",
+  "class": "Comics",
+  "age": 22,
+  "email": "harry@potter.com"
+}
+```
+
+**Response:**
+
+```json
+{
+  "status": "success",
+  "data": {
+    "id": "b74bd9c2-8590-4149-9628-3f738099831a",
+    "user": "Harry",
+    "class": "Comics",
+    "age": 22,
+    "email": "harry@potter.com",
+    "inserted_at": "2024-03-25T12:00:00+05:30"
+  }
+}
+```
